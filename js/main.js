@@ -1,0 +1,18 @@
+(function($){
+
+    "use strict";
+    //inicializar nosso contador
+    $(".contar").counterUp({
+        time:100,
+        delay: 10
+    });
+
+    var $doc = $("html,body");
+    $(".scroll-page").on("click", function(e){
+        $doc.animate({
+            scrollTop: $($.attr(this,'href')).offset().top
+        },500);
+        return false;
+    });
+
+})(jQuery);
